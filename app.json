@@ -1,0 +1,8 @@
+{
+  "name": "express-websocket",
+  "description": "A websocket node app that will connect the arduino to the client",
+  "repository": "https://github.com/hugomota/arduino-express-websockets.git",
+  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
+  "keywords": ["node", "express", "heroku", "socketIO"],
+  "image": "heroku/nodejs"
+}

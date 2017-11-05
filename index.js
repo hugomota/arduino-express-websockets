@@ -8,6 +8,8 @@ const server = http.createServer(app)
 const io     = socketIo(server)
 const port   = config.port
 
+app.get('/', (req, res) => res.send('The Server is Runing!'))
+
 server.listen(port);
 console.log('listen ' + port);
 
