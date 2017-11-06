@@ -409,10 +409,14 @@
     "yeast": "^0.1.2"
   },
   "devDependencies": {},
+  "engines": {
+   "node": "7.5.0"
+ },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log,./yarn.lock --copy-files",
-    "start": "npm run build && node dist/index.js"
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log,./yarn.lock,./deploy.sh --copy-files",
+    "start": "npm run build && node dist/index.js",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
