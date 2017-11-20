@@ -335,7 +335,6 @@
     "repeat-string": "^1.6.1",
     "repeating": "^2.0.1",
     "request": "^2.81.0",
-    "rimraf": "^2.6.2",
     "safe-buffer": "^5.1.1",
     "semver": "^5.4.1",
     "semver-diff": "^2.1.0",
@@ -410,11 +409,11 @@
   },
   "devDependencies": {},
   "engines": {
-   "node": "7.5.0"
- },
+    "node": "7.5.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log,./yarn.lock,./deploy.sh --copy-files",
+    "build": "rm -rf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules",
     "start": "npm run build && node dist/index.js",
     "postinstall": "npm run build"
   },
